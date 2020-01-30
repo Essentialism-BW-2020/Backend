@@ -14,7 +14,7 @@
 ## Tech/framework used
 <b>Built with:</b>
 
-- [Redux](https://redux.js.org/)
+- [Express](https://expressjs.com/)
 
 - [Node](https://nodejs.org)
 
