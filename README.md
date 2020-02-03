@@ -13,6 +13,9 @@ https://essentialism-node-express-serv.herokuapp.com/auth/register
 <br />
 **Password**: password
 
+To Create, Read, Update, and Delete your values and users, after you Register/Login in Submit to Paths:
+/auth/login, /users/, and /values/ with 4 JSON strings in categories: creativity, health, career, community.
+
 ## Tech/framework used
 <b>Built with:</b>
 
