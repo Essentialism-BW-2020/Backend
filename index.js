@@ -4,7 +4,7 @@ const cors = require('cors');
 const session = require('express-session');
 const KnexSessionStore = require('connect-session-knex')(session);
 
-const moment = require('moment');
+//const moment = require('moment');
 const db = require('./data/dbConfig.js');
 
 const sessionConfig = {
@@ -49,7 +49,8 @@ const authRouter = require('./auth/auth-router.js');
 server.use('/auth', authRouter);
 const usersRouter = require('./users/users-router.js');
 server.use('/users', usersRouter);
-
+const valuesRouter = require('./values/values-router.js');
+server.use('/values', valuesRouter);
 //const logger = (req, res, next) => {
 //  console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}:${moment().format()}`);
 //  next();
@@ -67,7 +68,7 @@ server.get('/', async (req, res) => {
 
 
 
-const port = process.env.PORT || 4040;
+const port = process.env.PORT || 4000;
 server.listen(port, () => { 
   console.log(`\n*** Server Running on http://localhost:${port} ***\n`)}
 );

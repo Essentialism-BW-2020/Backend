@@ -14,7 +14,7 @@ router.get('/', restrict, (req, res) => {
       res.status(500).json({message: 'GET Error for /.'});
     });
 });
-
+ 
 
 router.get('/:id', restrict, async (req, res, next) => {
   try {
