@@ -1,8 +1,8 @@
 # Essentialism: Backend 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 ----
-https://essentialism-node-express-serv.herokuapp.com/auth/register
 ----
+https://deploy-serv-node-essentialism.herokuapp.com/auth/register
 
 **Essentialism** is an application that allows users to build and modify a profile based on their personal values. The application then assists users in optimal decision making and productivity based on those personal values optimizing time management and fufillment.
 
