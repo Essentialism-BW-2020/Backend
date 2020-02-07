@@ -39,7 +39,7 @@ router.get('/:id', restrict, async (req, res, next) => {
 router.put('/:id', restrict, (req, res) => {
   Users.update(req.params.id, req.body)
       .then(updatedUser => {
-          res.status(200).json(updatedUser);
+          res.status(200).json(updatedUser).json("User updated.");
       })
       .catch(err => res.status(500).json({ errorMessage: "Error with update." }));
 });
