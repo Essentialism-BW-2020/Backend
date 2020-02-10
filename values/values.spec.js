@@ -1,25 +1,25 @@
 const request = require('supertest');
-const server = require('../index.js');
+const server = require('../server.js');
 
-describe("values-router.js", () => {
+describe("users-router.js", () => {
   describe("GET /values", () => {
-    test("did it return 200 status?", async () => {
+    test("did it return 401 status, unauthorized user status?", async () => {
       await request(server)
       .get("/values")
       .then(res => {
-        expect(res.status).toBe(200)
+        expect(res.status).toBe(401)
       })
     })
   })
 });
 
-describe("values-router.js", () => {
+describe("users-router.js", () => {
   describe("POST /users", () => {
-    test("should authenticated user and allow post to values db", async () => {
+    test("should not allow post to users db", async () => {
       await request(server)
       .post("/values")
       .then(res => {
-        expect(res.status).toBe(200)
+        expect(res.status).toBe(401)
       })
     })
   })

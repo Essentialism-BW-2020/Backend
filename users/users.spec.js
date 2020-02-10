@@ -1,13 +1,13 @@
 const request = require('supertest');
-const server = require('../index.js');
+const server = require('../server.js');
 
 describe("users-router.js", () => {
   describe("GET /users", () => {
-    test("did it return 404 status?", async () => {
+    test("did it return 401 status?", async () => {
       await request(server)
       .get("/users")
       .then(res => {
-        expect(res.status).toBe(404)
+        expect(res.status).toBe(401)
       })
     })
   })
